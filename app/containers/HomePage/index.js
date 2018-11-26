@@ -9,17 +9,25 @@
  * the linting exception.
  */
 
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import React, { Fragment } from 'react';
+import { resume } from '../../resume/resume';
+import Header from '../../components/Header';
+import Line from '../../components/Line';
+import Education from '../../components/Education';
+import Contact from '../../components/Contact';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
+    const { name, info, education, contact } = resume;
+    const { email, phone } = contact;
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <Fragment>
+        <Header name={name} label={info.label} />
+        <Line />
+        <Education educationHistory={education.history} />
+        <Contact email={email} phone={phone} />
+      </Fragment>
     );
   }
 }

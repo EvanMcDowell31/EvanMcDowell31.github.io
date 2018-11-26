@@ -10,9 +10,12 @@ class Contact extends Component {
   render() {
     const { email, phone } = this.props;
     return (
-      <div className={Styles.Contact}>
-        <div>{email}</div>
-        <div>{phone}</div>
+      <div className={Styles.contact}>
+        <div className={Styles.contactItem}>
+          {email}
+          &nbsp;
+          {phone}
+        </div>
       </div>
     );
   }

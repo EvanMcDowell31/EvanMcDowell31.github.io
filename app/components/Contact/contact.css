@@ -1,2 +1,8 @@
 .contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contactItem {
+  text-align: center;
 }

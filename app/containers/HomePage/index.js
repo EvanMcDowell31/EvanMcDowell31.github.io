@@ -14,18 +14,21 @@ import { resume } from '../../resume/resume';
 import Header from '../../components/Header';
 import Line from '../../components/Line';
 import Education from '../../components/Education';
+import Skills from '../../components/Skills';
 import Contact from '../../components/Contact';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
-    const { name, info, education, contact } = resume;
+    const { name, info, education, skills, contact } = resume;
     const { email, phone } = contact;
     return (
       <Fragment>
         <Header name={name} label={info.label} />
         <Line />
         <Education educationHistory={education.history} />
+        <Skills sets={skills.sets} />
+        <Line />
         <Contact email={email} phone={phone} />
       </Fragment>
     );

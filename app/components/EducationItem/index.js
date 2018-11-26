@@ -25,12 +25,9 @@ class EducationItem extends Component {
         <div>
           {institution}
           ,&nbsp;
-        </div>
-        <div>
           {location}
-          &nbsp;
+          &nbsp; ({end})
         </div>
-        <div>({end})</div>
       </div>
     );
   }

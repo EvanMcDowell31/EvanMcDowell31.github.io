@@ -16,6 +16,7 @@ import Line from '../../components/Line';
 import Education from '../../components/Education';
 import Skills from '../../components/Skills';
 import Contact from '../../components/Contact';
+import Styles from './homePage.css';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
@@ -23,14 +24,14 @@ export default class HomePage extends React.PureComponent {
     const { name, info, education, skills, contact } = resume;
     const { email, phone } = contact;
     return (
-      <Fragment>
+      <div className={Styles.page}>
         <Header name={name} label={info.label} />
         <Line />
         <Education educationHistory={education.history} />
         <Skills sets={skills.sets} />
         <Line />
         <Contact email={email} phone={phone} />
-      </Fragment>
+      </div>
     );
   }
 }

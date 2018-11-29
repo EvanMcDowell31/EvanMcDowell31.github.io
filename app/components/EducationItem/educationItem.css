@@ -1,8 +1,9 @@
 .itemContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
 }
 .bold {
-    font-weight: 600;
+  font-weight: 600;
 }

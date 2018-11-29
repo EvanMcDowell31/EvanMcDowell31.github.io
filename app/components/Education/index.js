@@ -12,7 +12,7 @@ class Education extends Component {
     const { educationHistory } = this.props;
     return (
       <div className={Styles.education}>
-        <div className={Styles.title}>Education</div>
+        <h1>Education</h1>
         {educationHistory.map((item, index) => (
           <EducationItem key={index} item={item} />
         ))}

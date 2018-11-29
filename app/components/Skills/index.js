@@ -10,13 +10,12 @@ class Skills extends Component {
 
   render() {
     const { sets } = this.props;
-    const setCount = sets.length;
     return (
       <div className={Styles.skills}>
-        <div className={Styles.title}>Technical Skills</div>
+        <h1>Technical Skills</h1>
         <div className={Styles.setRow}>
-          {sets.map(set => (
-            <SetRow set={set} />
+          {sets.map((set, index) => (
+            <SetRow set={set} column={index} length={sets.length} />
           ))}
         </div>
       </div>

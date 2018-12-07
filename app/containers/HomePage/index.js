@@ -18,12 +18,21 @@ import Education from '../../components/Education';
 import Skills from '../../components/Skills';
 import Experience from '../../components/Experience';
 import Contact from '../../components/Contact';
+import Social from '../../components/Social';
 import Styles from './homePage.css';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
-    const { name, info, education, skills, contact, employment } = resume;
+    const {
+      name,
+      info,
+      education,
+      skills,
+      contact,
+      employment,
+      social,
+    } = resume;
     const { email, phone } = contact;
     return (
       <div className={Styles.page}>
@@ -35,6 +44,7 @@ export default class HomePage extends React.PureComponent {
         <Experience experience={employment.history} />
         <Line />
         <Contact name={name} email={email} phone={phone} />
+        <Social social={social} />
       </div>
     );
   }

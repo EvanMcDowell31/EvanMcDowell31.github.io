@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import Styles from './experienceItem.css';
 
 const ExperienceItem = props => {
+  const getDateRange = (start, end, current) =>
+    start !== end ? `${start} - ${current ? 'present' : end}` : start;
+
   const {
     position,
     employer,
@@ -22,7 +25,7 @@ const ExperienceItem = props => {
         <div className={Styles.bold}>{position}</div>
       </div>
       <div className={Styles.dateRange}>
-        {`${start} - ${current ? 'present' : end}`}
+        {getDateRange(start, end, current)}
       </div>
       <div>{summary}</div>
       <ul>

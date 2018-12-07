@@ -1,0 +1,27 @@
+.itemContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.itemRow {
+  flex-direction: row;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.link {
+  font-size: 20px;
+  color: navy;
+}
+
+.dateRange {
+  position: absolute;
+  right: 0;
+  top: 0.35em;
+}

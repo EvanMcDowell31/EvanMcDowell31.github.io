@@ -1,5 +1,5 @@
 .skills {
-  margin: 20px;
+  margin: 30px;
 }
 
 .setRow {
@@ -12,10 +12,12 @@
 .setCol {
   border-right: 2px solid;
   padding: 0px 30px 0px 30px;
+  text-align: left;
 }
 
 .lastCol {
   padding-left: 30px;
+  text-align: left;
 }
 
 .colTitle {

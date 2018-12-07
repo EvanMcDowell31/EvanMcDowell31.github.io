@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Styles from './skills.css';
 
-class SetRow extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  getColumnStyles = () => {
-    const { column, length } = this.props;
+const SetRow = props => {
+  const getColumnStyles = () => {
+    const { column, length } = props;
     return column !== length - 1 ? Styles.setCol : Styles.lastCol;
   };
 
-  render() {
-    const { set } = this.props;
-    const { name, skills } = set;
-    return (
-      <div className={this.getColumnStyles()}>
-        <div className={Styles.colTitle}>{name}</div>
-        <ul>
-          {skills.map(skill => (
-            <li>&nbsp; {skill}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-}
+  const { set } = props;
+  const { name, skills } = set;
+  return (
+    <div className={getColumnStyles()}>
+      <div className={Styles.colTitle}>{name}</div>
+      <ul>
+        {skills.map(skill => (
+          <li>&nbsp; {skill}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+SetRow.propTypes = {
+  set: PropTypes.object,
+  column: PropTypes.number,
+  length: PropTypes.number,
+};
 
 export default SetRow;

@@ -9,28 +9,32 @@
  * the linting exception.
  */
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import { resume } from '../../resume/resume';
 import Header from '../../components/Header';
+import Profile from '../../components/Profile';
 import Line from '../../components/Line';
 import Education from '../../components/Education';
 import Skills from '../../components/Skills';
+import Experience from '../../components/Experience';
 import Contact from '../../components/Contact';
 import Styles from './homePage.css';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
-    const { name, info, education, skills, contact } = resume;
+    const { name, info, education, skills, contact, employment } = resume;
     const { email, phone } = contact;
     return (
       <div className={Styles.page}>
         <Header name={name} label={info.label} />
         <Line />
+        <Profile brief={info.brief} />
         <Education educationHistory={education.history} />
         <Skills sets={skills.sets} />
+        <Experience experience={employment.history} />
         <Line />
-        <Contact email={email} phone={phone} />
+        <Contact name={name} email={email} phone={phone} />
       </div>
     );
   }

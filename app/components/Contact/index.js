@@ -7,7 +7,9 @@ const Contact = props => {
   return (
     <div className={Styles.contact}>
       <div className={Styles.name}>{name}</div>
-      <div className={Styles.email}>{email}</div>
+      <a href={`mailTo:${email}`}>
+        <div className={Styles.email}>{email}</div>
+      </a>
       <div className={Styles.phone}>{phone}</div>
     </div>
   );

@@ -12,6 +12,8 @@
 }
 
 .email {
+  text-decoration: none;
+  color: navy;
   position: absolute;
   right: 35%;
 }
